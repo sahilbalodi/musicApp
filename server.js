@@ -7,7 +7,7 @@ const fileName = path.join(__dirname, './build/index.html');
 const server = new Hapi.Server();
 
 server.connection({
-  port: 8090,
+  port: 80,
   host: 'localhost',
 });
 server.register(inert);
