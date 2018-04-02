@@ -12,6 +12,12 @@ server.connection({
 });
 server.register(inert);
 server.route([{
+  path: '/ping',
+  method: 'GET',
+  handler: (request, reply) => {
+    reply('pong');
+  },
+}, {
   path: '/js',
   method: 'GET',
   handler: {
