@@ -12,6 +12,12 @@ server.connection({
 });
 server.register(inert);
 server.route([{
+  path: '/static/media/{gif}',
+  method: 'GET',
+  handler: (request, reply) => {
+    reply.file(path.join(__dirname, `./build/static/media/${request.params.gif}`));
+  },
+}, {
   path: '/ping',
   method: 'GET',
   handler: (request, reply) => {
