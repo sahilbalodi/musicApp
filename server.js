@@ -27,7 +27,7 @@ server.route([{
   path: '/js',
   method: 'GET',
   handler: {
-    file: path.join(__dirname, './build/static/js/main.c727f7ae.js'),
+    file: path.join(__dirname, './build/static/js/main.fec78919.js'),
   },
 }, {
   path: '/css',
