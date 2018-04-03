@@ -18,16 +18,16 @@ server.route([{
     reply('pong');
   },
 }, {
-  path: '/static/js/main.7dc2daf4.js',
+  path: '/js',
   method: 'GET',
   handler: {
-    file: path.join(__dirname, './build/static/js/main.7dc2daf4.js'),
+    file: path.join(__dirname, './build/static/js/main.c727f7ae.js'),
   },
 }, {
-  path: '/static/css/main.e89898b5.css',
+  path: '/css',
   method: 'GET',
   handler: {
-    file: path.join(__dirname, './build/static/css/main.e89898b5.css'),
+    file: path.join(__dirname, './build/static/css/main.1d606759.css'),
   },
 }, {
   path: '/',
