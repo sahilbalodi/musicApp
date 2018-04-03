@@ -7,8 +7,8 @@ const fileName = path.join(__dirname, './build/index.html');
 const server = new Hapi.Server();
 
 server.connection({
-  port: 80,
-  host: 'localhost',
+  port: 8080,
+  host: '0.0.0.0',
 });
 server.register(inert);
 server.route([{
@@ -18,13 +18,13 @@ server.route([{
     reply('pong');
   },
 }, {
-  path: '/js',
+  path: '/static/js/main.7dc2daf4.js',
   method: 'GET',
   handler: {
     file: path.join(__dirname, './build/static/js/main.7dc2daf4.js'),
   },
 }, {
-  path: '/css',
+  path: '/static/css/main.e89898b5.css',
   method: 'GET',
   handler: {
     file: path.join(__dirname, './build/static/css/main.e89898b5.css'),
@@ -56,6 +56,6 @@ server.start((error) => {
     console.log(error);
     process.exit();
   }
-  console.log('server started');
+  console.log(`server started ${server.info.uri}`);
 });
 
